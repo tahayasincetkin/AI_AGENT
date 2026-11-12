@@ -1,0 +1,41 @@
+# --- Unity için Yoksayılacaklar ---
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]serSettings/
+
+# Visual Studio / C++ tarafından üretilen geçici dosyalar
+/[Cc]ache/
+/[Aa]ssetsRef/
+/[Mm]emoryCaptures/
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.opensdf
+*.sdf
+
+# Derleme çıktıları (Binaries)
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.lib
+*.a
+*.exp

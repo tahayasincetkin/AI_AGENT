@@ -1,0 +1,71 @@
+[Sat Apr 18 14:09:03 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 14:09:06 2026] [GEMINI]: Hello. How can I assist you with your Unity project "My project (2)" today? I am ready to help you manage your files or execute scripts within your environment.
+-------------------------------------------
+[Sat Apr 18 14:11:48 2026] [USER]: could you create a folder named 'E0226 ERRORE' on my desktop?
+-------------------------------------------
+[Sat Apr 18 14:14:24 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 14:14:27 2026] [GEMINI]: Hello. How can I assist you with your Unity project today? If you need to create folders, open files, or execute scripts, please let me know.
+-------------------------------------------
+[Sat Apr 18 14:15:17 2026] [USER]: could you create a folder named 'DENEME002' on my desktop?
+-------------------------------------------
+[Sat Apr 18 14:16:17 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 14:16:22 2026] [GEMINI]: Hello. I am your professional system assistant. I see you are currently working in Unity 2022.3.62f2 on the scene "SampleScene" within "My project (2)".
+
+How can I assist you with your project today? I can help you create directories, open files, or write and execute scripts.
+-------------------------------------------
+[Sat Apr 18 14:16:39 2026] [USER]: how are you
+-------------------------------------------
+[Sat Apr 18 14:16:43 2026] [GEMINI]: I am functioning optimally and am ready to assist you with your Unity project, "My project (2)". 
+
+Please let me know if you would like me to create directories, open files, or execute scripts within your environment. How can I help you today?
+-------------------------------------------
+[Sat Apr 18 16:10:40 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 16:10:46 2026] [SYSTEM]: Folder created: path
+-------------------------------------------
+[Sat Apr 18 16:10:46 2026] [SYSTEM]: AI Code written to: filename
+-------------------------------------------
+[Sat Apr 18 16:10:46 2026] [GEMINI]: Hello. I am your professional system assistant. I am currently synced with your Unity 2022.3.62f2 project: **"My project (2)"**.
+
+How can I assist you today? Please let me know if you need to perform any of the following:
+*   Create a new directory using `[COMMAND:MKDIR|path]`
+*   Open an existing script or asset using `[COMMAND:OPEN|path]`
+*   Execute a script using `[COMMAND:EXECUTE|language|filename|code]`
+-------------------------------------------
+[Sat Apr 18 16:12:10 2026] [USER]: could you create a folder named 'DENEME002' on my desktop?
+-------------------------------------------
+[Sat Apr 18 16:27:39 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 16:27:43 2026] [GEMINI]: Hello. I am your professional system assistant. I am ready to assist you with your Unity 2022.3.62f2 project. Please let me know if you would like to create directories, open files, or execute scripts within this environment.
+-------------------------------------------
+[Sat Apr 18 16:30:18 2026] [USER]: could you create a folder named 'DENEME002' on my desktop?
+-------------------------------------------
+[Sat Apr 18 19:09:55 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 19:09:59 2026] [GEMINI]: Hello. How can I assist you with your Unity project "My project (2)" today? I am ready to create directories, open files, or execute code as needed.
+-------------------------------------------
+[Sat Apr 18 19:11:22 2026] [USER]: could you create a folder namde 'DENEME022' on my desktop?
+-------------------------------------------
+[Sat Apr 18 19:28:12 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 19:28:14 2026] [GEMINI]: Hello. How can I assist you with your Unity project today? I am ready to manage your file structure or execute scripts as needed.
+-------------------------------------------
+[Sat Apr 18 19:29:05 2026] [USER]: vould you create a folder named 'DENEME022' on my desktop?
+-------------------------------------------
+[Sat Apr 18 19:37:46 2026] [USER]: hi bro
+-------------------------------------------
+[Sat Apr 18 19:37:51 2026] [GEMINI]: Hello. How can I assist you with your Unity project **"My project (2)"** today? I am ready to help you manage your files, navigate your directories, or execute scripts within your environment.
+-------------------------------------------
+[Sat Apr 18 19:39:18 2026] [USER]: coul you create a folder named 'DENEME022' on my desktop?
+-------------------------------------------
+[Sat Apr 18 19:41:04 2026] [USER]: could you create a folder named 'DENEME022' on my desktop?
+-------------------------------------------
+[Sat Apr 18 19:50:41 2026] [USER]: could you create a folder named 'DENEME022' on my desktop?
+-------------------------------------------
+[Sat Apr 18 19:55:28 2026] [USER]: could you create a folder named 'ARCHIVE002' on my desktop?
+-------------------------------------------
+[Sat Apr 18 20:14:39 2026] [USER]: could you create a folder named 'ARCHIVE002' on my desktop?
+-------------------------------------------
