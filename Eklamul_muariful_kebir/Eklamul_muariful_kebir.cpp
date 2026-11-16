@@ -16,7 +16,7 @@
 using json = nlohmann::json;
 namespace fs = std::filesystem;
 
-// ---------------- DOSYA YÖNETİCİSİ ----------------
+
 class FileManager {
 public:
     static std::string WriteFile(const std::string& path, const std::string& content) {
@@ -49,7 +49,7 @@ public:
 
     static std::string CreateDir(const std::string& path) {
         try {
-            // filesystem kütüphanesini kullanarak klasör oluşturur
+            
             if (fs::create_directories(path)) {
                 return "SUCCESS: Directory created.";
             }
@@ -61,7 +61,7 @@ public:
     }
 };
 
-// ---------------- AJAN ÇEKİRDEĞİ ----------------
+
 class EklamulMuarifPro {
 private:
     std::string api_key;
@@ -75,8 +75,8 @@ private:
 
 public:
     EklamulMuarifPro() {
-        // API ANAHTARINI BURAYA EKLE
-        api_key = "AIzaSyD_Uxlzqn9_BvetvfEYyt2mw6XtcT8jPNs";
+ 
+        api_key = "api key anahtarı girin";
     }
 
     std::string ExecuteSingleAction(json& cmd) {
@@ -89,9 +89,9 @@ public:
         if (tool == "DELETE") return FileManager::DeleteFile(path);
         if (tool == "MKDIR")  return FileManager::CreateDir(path);
 
-        // Klasörü Windows'ta fiziksel olarak açma komutu
+
         if (tool == "OPEN") {
-            // ShellExecuteA için Windows.h gereklidir
+
             ShellExecuteA(NULL, "open", path.c_str(), NULL, NULL, SW_SHOWNORMAL);
             return "SUCCESS: Opened " + path;
         }
@@ -100,23 +100,19 @@ public:
             std::string command = "";
             std::string extension = fs::path(path).extension().string();
 
-            // 1. PYTHON ÇALIŞTIRMA
+        
             if (extension == ".py") {
                 command = "start cmd /k \"python \"" + path + "\" & pause\"";
             }
-            // 2. C++ DERLEME VE ÇALIŞTIRMA (MinGW/g++ yüklü varsayılır)
+
             else if (extension == ".cpp") {
                 std::string exeName = path.substr(0, path.find_last_of(".")) + ".exe";
-                // Önce derler, hata yoksa çalıştırır
                 command = "start cmd /k \"g++ \"" + path + "\" -o \"" + exeName + "\" && \"" + exeName + "\" & pause\"";
             }
-            // 3. C# DERLEME VE ÇALIŞTIRMA (csc.exe yüklü varsayılır)
             else if (extension == ".cs") {
                 std::string exeName = path.substr(0, path.find_last_of(".")) + ".exe";
-                // Windows'un standart C# derleyicisini çağırmaya çalışır
                 command = "start cmd /k \"csc /out:\"" + exeName + "\" \"" + path + "\" && \"" + exeName + "\" & pause\"";
             }
-            // 4. DİREKT EXE ÇALIŞTIRMA
             else if (extension == ".exe") {
                 command = "start \"\" \"" + path + "\"";
             }
@@ -156,7 +152,6 @@ public:
         int retryCount = 0;
         const int maxRetries = 3; // En fazla 3 kez tekrar dene
 
-        // 2. Komple bu blokla değiştir
         while (retryCount < maxRetries) {
             try {
                 r = cpr::Post(
@@ -167,12 +162,10 @@ public:
                     cpr::Timeout{ 60000 }
                 );
 
-                // Eğer 503 (Sunucu Meşgul) almadıysak döngüden çık
                 if (r.status_code != 503) {
                     break;
                 }
 
-                // Eğer 503 aldıysak, her denemede biraz daha fazla bekle (2sn, 4sn...)
                 retryCount++;
                 if (retryCount < maxRetries) {
                     Sleep(2000 * retryCount);
@@ -183,7 +176,6 @@ public:
             }
         }
 
-        // 3. Döngü bittikten sonraki kontroller
         if (r.status_code == 0) return "CONNECTION_ERROR: Check internet.";
         if (r.status_code == 429) return "RATE_LIMIT: API quota exceeded.";
         if (r.status_code == 503) return "SERVER_OVERLOAD: Gemini is still busy after retries.";
@@ -240,7 +232,6 @@ public:
     }
 };
 
-// ---------------- GLOBAL STATE ----------------
 EklamulMuarifPro* globalAgent = nullptr;
 static std::string responseBuffer;
 
@@ -253,7 +244,6 @@ struct ErrorDetails {
 
 static ErrorDetails lastError = { "None", "None", 0, "None" };
 
-// ---------------- DLL EXPORTS ----------------
 extern "C" {
     __declspec(dllexport) void __stdcall InitAgent() {
         if (!globalAgent) globalAgent = new EklamulMuarifPro();
